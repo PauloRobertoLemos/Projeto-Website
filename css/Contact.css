@@ -3,13 +3,12 @@
 {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
 }
 body
 {
-    min-height: 100vh;
+    min-height: 100px;
     overflow-x: hidden;
     background: linear-gradient(#2b1055, #7597de);
 }
@@ -97,6 +96,31 @@ section img#mountains_front
 {
     z-index: 10;
 }
+#text
+{
+    position: absolute;
+    right: -350px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+}
+#btn
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+.fundo img, .caixa p
+{
+    display: inline-block;
+}
 .fundo{
     padding: 150px;
     position: relative;
@@ -104,20 +128,36 @@ section img#mountains_front
 }
 .fundo img
 {
-    display: flex;
     border-radius: 50%;
     width: 240px;
     height: 240px;
-    top: 0;
+    justify-content: center;
+    float: left;
 
 }
-.container h2
+#conteudo p
 {
-    display: block;
     padding-top: 5px;
-    padding-left: 250px;
-    text-align: center;
+    height: 100px;
     font-size: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-family: 'Trebuchet Ms';
     color: #fff;
+    float: center;
+}
+#redes ul
+{
+   display: flex;
+   justify-content: center;
+
+}
+#redes ul a 
+{
+    display: inline-block;
+    padding: 10px;
+}
+#redes ul li a img
+{
+    max-width: 50px;
+    max-height: 50px;
 }
