@@ -12,9 +12,8 @@ body
     overflow-x: hidden;
     background: linear-gradient(#2b1055, #7597de);
 }
-header
-{
-    position: absolute;
+header nav
+{ 
     top: 0;
     left: 0;
     width: 100%;
@@ -24,38 +23,120 @@ header
     align-items: center;
     z-index: 10000;
 }
-header .logo
+nav
+{
+    display: inline-flex;
+}
+.logo
+{
+    display: flex;
+    align-items: center;
+}
+.logo h1
 {
     color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 2em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
-header ul
+.nav-bar
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+.nav-list
+{
+    display: flex;
+    align-items:center;
+}
+.nav-list ul 
 {
     display: flex;
     justify-content: center;
-    align-items: center;
-}
-header ul li
-{
     list-style: none;
-    margin-left: 20px;
 }
-header ul li a
+.nav-list ul li a
 {
     text-decoration: none;
     padding: 4px 8px;
-    color: #fff;
-    border-radius: 20px;
+    border-radius: 50px;
 }
-header ul li a:hover,
-header ul li a.active
+.nav-list ul li a:hover,
+.nav-list ul li a:active
 {
     background: #fff;
     color: #2b1055;
+}
+.nav-item
+{
+    margin: 0 15px;
+    color: #fff;
+}
+.nav-link
+{
+    text-decoration: none;
+    font-size: 1.15rem;
+    font-weight: 400;
+}
+.login-buttom button
+{
+    border: none;
+    background: #1c0522;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.login-buttom button a 
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.mobile-menu-icon
+{
+    display: none;
+}
+.mobile-menu
+{
+    display: none;
+}
+
+@media screen and (max-width: 730px){
+    .nav-bar{
+        padding: 1.5rem 4rem;
+    }
+    .nav-item{
+        display: none;
+    }
+    .login-buttom{
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-buttom {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-buttom button {
+        width: 100%;
+    }
+    .open{
+        display: block;
+    }
 }
 section
 {
@@ -117,7 +198,7 @@ section img#mountains_front
     z-index: 9;
     transform: translateY(100px);
 }
-.fundo img, .caixa p
+.fundo img
 {
     display: inline-block;
 }
