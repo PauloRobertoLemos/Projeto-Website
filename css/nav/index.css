@@ -99,9 +99,10 @@ nav
     display: none;
 }
 
-@media screen and (max-width: 730px){
+@media screen and (max-width: 740px){
     .nav-bar{
         padding: 1.5rem 4rem;
+        scroll-behavior: smooth;
     }
     .nav-item{
         display: none;
@@ -122,6 +123,7 @@ nav
         flex-direction: column;
         text-align: center;
         padding-bottom: 1rem;
+        scroll-behavior: smooth;
     }
     .mobile-menu .nav-item {
         display: block;
@@ -138,6 +140,7 @@ nav
         display: block;
     }
 }
+
 section
 {
     position: relative;
