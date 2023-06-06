@@ -74,9 +74,10 @@ section img#mountains_front{
         padding: 0;
         margin: 40px;
     }
+    .container{
+        margin-top: -550px;
+    }
 }
-/* Configurando as imagens */
-
 /* Aba de Sign-in */
 
 .container
