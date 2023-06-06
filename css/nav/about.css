@@ -203,6 +203,12 @@ nav{
     }
     #conteudo h2{
         padding: 0;
+        font-size: 1.8rem;
+        margin-left: -130px;
+    }
+    #conteudo p{
+        margin-left: -100px;
+        float: none;
     }
 }
 /* Configurando as imagens */

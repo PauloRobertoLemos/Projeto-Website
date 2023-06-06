@@ -204,9 +204,21 @@ nav{
     #conteudo h2{
         padding: 0;
     }
-    #redes ul{
-        padding-left: 0;
+    #conteudo p{
+        margin-left: -130px;
         margin-bottom: 0;
+        justify-content: none;
+    }
+    #redes ul{
+        margin-left: -140px;
+        margin-bottom: 0;
+    }
+    #redes ul li{
+        width: 60px;
+        height: 60px;
+    }
+    .fundo img{
+        margin-left: -120px;
     }
 }
 /* Configurando as imagens */
