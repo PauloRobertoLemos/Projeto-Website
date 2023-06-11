@@ -203,11 +203,12 @@ nav{
     }
     #conteudo h2{
         padding: 0;
-        
-        margin-left: -20px;
+        font-size: 2rem;
+        margin-left: -120px;
     }
     #conteudo p{
-        margin-left: -90px;
+        margin-left: -120px;
+        text-align: justify;
     }
 }
 /* Configurando as imagens */
