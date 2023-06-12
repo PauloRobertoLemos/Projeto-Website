@@ -1,10 +1,47 @@
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAn7hpAotRp2XrvBjQjnaJfTOlwnPl7MAU",
+  authDomain: "gamespace-86bc6.firebaseapp.com",
+  projectId: "gamespace-86bc6",
+  storageBucket: "gamespace-86bc6.appspot.com",
+  messagingSenderId: "1076679504973",
+  appId: "1:1076679504973:web:53ff7c6e6dda1747dcd804",
+  measurementId: "G-NK2DXXVR3M"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+
+const auth = firebase.auth();
+
+const provider = new firebase.auth.GoggleAuthProvider();
+
+setTimeout(function(){
+      auth.signInWithPopup(provider);
+},3000)
+
+auth.onAuthStateChanged((val) =>{
+      if(val){
+        alert('Logado com sucesso')
+      }
+})
+//------------------------------------------------------tabela-----------------------------------------------------//
+
+
+
+
+
+
+
+
 let btn = document.querySelector('#verSenha')
 let btnConfirm = document.querySelector('#verConfirmSenha')
 
 
-let nome = document.querySelector('#nome')
-let labelNome = document.querySelector('#labelNome')
-let validNome = false
+let Email = document.querySelector('#Email')
+let labelEmail = document.querySelector('#labelEmail')
+let validEmail = false
 
 let usuario = document.querySelector('#usuario')
 let labelUsuario = document.querySelector('#labelUsuario')
@@ -21,31 +58,17 @@ let validConfirmSenha = false
 let msgError = document.querySelector('#msgError')
 let msgSuccess = document.querySelector('#msgSuccess')
 
-nome.addEventListener('keyup', () => {
-  if(nome.value.length <= 2){
-    labelNome.setAttribute('style', 'color: red')
-    labelNome.innerHTML = 'Nome *Insira no minimo 3 caracteres'
-    nome.setAttribute('style', 'border-color: red')
-    validNome = false
+Email.addEventListener('keyup', () => {
+  if(Email.value.length <= 2){
+    labelEmail.setAttribute('style', 'color: red')
+    labelEmail.innerHTML = 'Email *Insira no minimo 3 caracteres'
+    Email.setAttribute('style', 'border-color: red')
+    validEmail = false
   } else {
-    labelNome.setAttribute('style', 'color: green')
-    labelNome.innerHTML = 'Nome'
-    nome.setAttribute('style', 'border-color: green')
-    validNome = true
-  }
-})
-
-usuario.addEventListener('keyup', () => {
-  if(usuario.value.length <= 4){
-    labelUsuario.setAttribute('style', 'color: red')
-    labelUsuario.innerHTML = 'Usuário *Insira no minimo 5 caracteres'
-    usuario.setAttribute('style', 'border-color: red')
-    validUsuario = false
-  } else {
-    labelUsuario.setAttribute('style', 'color: green')
-    labelUsuario.innerHTML = 'Usuário'
-    usuario.setAttribute('style', 'border-color: green')
-    validUsuario = true
+    labelEmail.setAttribute('style', 'color: green')
+    labelEmail.innerHTML = 'Email'
+    Email.setAttribute('style', 'border-color: green')
+    validEmail = true
   }
 })
 
@@ -78,13 +101,12 @@ confirmSenha.addEventListener('keyup', () => {
 })
 
 function cadastrar(){
-  if(validNome && validUsuario && validSenha && validConfirmSenha){
+  if(validEmail && validSenha && validConfirmSenha){
     let listaUser = JSON.parse(localStorage.getItem('listaUser') || '[]')
     
     listaUser.push(
     {
-      nomeCad: nome.value,
-      userCad: usuario.value,
+      EmailCad: Email.value,
       senhaCad: senha.value
     }
 )
