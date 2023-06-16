@@ -1,26 +1,3 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyC2kUH7z9YnYB7GusSxZrOWFaCeZBGH-Kc",
-    authDomain: "projeto-test-f53e9.firebaseapp.com",
-    projectId: "projeto-test-f53e9",
-    storageBucket: "projeto-test-f53e9.appspot.com",
-    messagingSenderId: "55287950434",
-    appId: "1:55287950434:web:dbe5cf80a1a8f4c71cf53b"
-};
-
-  firebase.initializeApp(firebaseConfig)
-
-  const db = firebase.firestore();
-
-  //------------------------------------------------------tabela-----------------------------------------------------//
-
-
-
-
-
-
-
-
-
 let btn = document.querySelector('.fa-eye')
 
 btn.addEventListener('click', ()=>{
@@ -34,49 +11,51 @@ btn.addEventListener('click', ()=>{
 })
 
 function entrar(){
-  let email = document.querySelector('#email')
-  let emailLabel = document.querySelector('#emailLabel')
+  let usuario = document.querySelector('#usuario')
+  let userLabel = document.querySelector('#userLabel')
   
   let senha = document.querySelector('#senha')
   let senhaLabel = document.querySelector('#senhaLabel')
   
   let msgError = document.querySelector('#msgError')
-  let listaEmail = []
+  let listaUser = []
   
-  let emailValid = {
-    Email: null,
-    senha: null
-}
+  let userValid = {
+    nome: '',
+    user: '',
+    senha: ''
+  }
   
-listaEmail = JSON.parse(localStorage.getItem('listaemail'))
+  listaUser = JSON.parse(localStorage.getItem('listaUser'))
   
-listaEmail?.forEach((item) => {
-    if(email.value == item.emailCad && senha.value == item.senhaCad){
+  listaUser.forEach((item) => {
+    if(usuario.value == item.userCad && senha.value == item.senhaCad){
        
-        emailValid = {
-         Email: item.emailCad,
+      userValid = {
+         nome: item.nomeCad,
+         user: item.userCad,
          senha: item.senhaCad
-        }
+       }
       
     }
-})
+  })
    
-  if(email.value == emailValid.Email && senha.value == emailValid.senha){
+  if(usuario.value == userValid.user && senha.value == userValid.senha){
     window.location.href = '../../index.html'
     
     let mathRandom = Math.random().toString(16).substr(2)
     let token = mathRandom + mathRandom
     
     localStorage.setItem('token', token)
-    localStorage.setItem('emailLogado', JSON.stringify(emailValid))
+    localStorage.setItem('userLogado', JSON.stringify(userValid))
   } else {
-    emailLabel.setAttribute('style', 'color: red')
-    email.setAttribute('style', 'border-color: red')
+    userLabel.setAttribute('style', 'color: red')
+    usuario.setAttribute('style', 'border-color: red')
     senhaLabel.setAttribute('style', 'color: red')
     senha.setAttribute('style', 'border-color: red')
     msgError.setAttribute('style', 'display: block')
     msgError.innerHTML = 'Usuário ou senha incorretos'
-    email.focus()
+    usuario.focus()
   }
   
 }

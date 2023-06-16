@@ -88,6 +88,12 @@ section img#mountains_front{
     font-size: 2.5rem;
     color: #fff;
 }
+#conteudo a{
+    text-decoration: none;
+    padding: 4px 8px;
+    color: pink;
+}
+
 #text{
     position: absolute;
     color: #fff;
