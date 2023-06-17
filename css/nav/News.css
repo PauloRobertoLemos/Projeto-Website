@@ -213,6 +213,10 @@ nav{
     position: relative;
     z-index: 10000;
 }
+#conteudo img{
+    width: 10px;
+    height: 10px;
+}
 /* Configuração do Rodapé */
 #footer {
     background-color: #53416b;
