@@ -28,8 +28,8 @@ function entrar(){
   
   listaUser = JSON.parse(localStorage.getItem('listaUser'))
   
-listaEmail?.forEach((item) => {
-    if(email.value == item.emailCad && senha.value == item.senhaCad){
+  listaUser?.forEach((item) => {
+    if(usuario.value == item.userCad && senha.value == item.senhaCad){
        
       userValid = {
          nome: item.nomeCad,
@@ -41,7 +41,7 @@ listaEmail?.forEach((item) => {
   })
    
   if(usuario.value == userValid.user && senha.value == userValid.senha){
-    window.location.href = '../../index.html'
+    window.location.href = '../html/aba do usuario.html'
     
     let mathRandom = Math.random().toString(16).substr(2)
     let token = mathRandom + mathRandom
@@ -59,3 +59,4 @@ listaEmail?.forEach((item) => {
   }
   
 }
+

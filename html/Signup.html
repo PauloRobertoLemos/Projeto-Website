@@ -12,7 +12,9 @@
     <!-- BootStrap -->
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     
-
+    <!-- ICON -->
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <title>Sign-up</title>
 </head>
@@ -37,10 +39,16 @@
   
           <div id="msgError"></div>
             <div id="msgSuccess"></div>
-              <form action="/cadastro" method="post">
+              
+                
                 <div class="label-float">
-                  <input type="text" id="Email" placeholder=" " required />
-                  <label id="labelEmail" for="Email">Email</label>
+                  <input type="text" id="nome" placeholder="" required />
+                  <label id="labelNome" for="nome">Nome</label>
+                </div>
+
+                <div class="label-float">
+                  <input type="text" id="usuario" placeholder=" " required />
+                  <label id="labelUsuario" for="usuario">Email</label>
                 </div>
 
                 <div class="label-float">
@@ -52,21 +60,26 @@
                 <div class="label-float">
                   <input type="password" id="confirmSenha" placeholder=" " required />
                   <label id="labelConfirmSenha" for="confirmSenha"
-                    >Confirmar Senha</label
-                  >
+                    >Confirmar Senha</label>
                   <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
                 </div>
-                <div class="label-float">
-                  <input type="text" id="">
+                
+                <div class="geolocalizacao" id="demo">
+                  <ion-icon name="location-outline"></ion-icon>
+                  <button onclick="getLocation()">Clique Aqui</button>
                 </div>
+
                 <div class="justify-center">
                   <button onclick="cadastrar()">Cadastrar</button>
                 </div>
-              </form>
+
+                <div class="justify-center">
+                  <hr />
+                </div>
         </div>
     </div>
 
       <script src="../js/js do login e cadastro/Signup.js"></script>
     </body>
->>>>>>> ecc9133e8b812db0585d56b7d2d61c24a7bff1be
+
 </html>

@@ -205,4 +205,13 @@ button:hover
     border-radius: 4px;
     display: none;
 }
-  
+
+/* GEO LOCALIZAÇÃO */
+
+.geolocalizacao{
+    color: #fff;
+    text-decoration: none;
+}
+ion-icon{
+    color: #000;
+}
