@@ -36,32 +36,35 @@
           <h1>Cadastrar</h1>
   
           <div id="msgError"></div>
-          <div id="msgSuccess"></div>
-  
-          <div class="label-float">
-            <input type="text" id="Email" placeholder=" " required />
-            <label id="labelEmail" for="Email">Email</label>
-          </div>
+            <div id="msgSuccess"></div>
+              <form action="/cadastro" method="post">
+                <div class="label-float">
+                  <input type="text" id="Email" placeholder=" " required />
+                  <label id="labelEmail" for="Email">Email</label>
+                </div>
 
-      <div class="label-float">
-        <input type="password" id="senha" placeholder=" " required />
-        <label id="labelSenha" for="senha">Senha</label>
-        <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
-      </div>
+                <div class="label-float">
+                  <input type="password" id="senha" placeholder=" " required />
+                  <label id="labelSenha" for="senha">Senha</label>
+                  <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+                </div>
 
-      <div class="label-float">
-        <input type="password" id="confirmSenha" placeholder=" " required />
-        <label id="labelConfirmSenha" for="confirmSenha"
-          >Confirmar Senha</label
-        >
-        <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
-      </div>
-
-      <div class="justify-center">
-        <button onclick="cadastrar()">Cadastrar</button>
-      </div>
+                <div class="label-float">
+                  <input type="password" id="confirmSenha" placeholder=" " required />
+                  <label id="labelConfirmSenha" for="confirmSenha"
+                    >Confirmar Senha</label
+                  >
+                  <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+                <div class="label-float">
+                  <input type="text" id="">
+                </div>
+                <div class="justify-center">
+                  <button onclick="cadastrar()">Cadastrar</button>
+                </div>
+              </form>
+        </div>
     </div>
-  </div>
 
       <script src="../js/js do login e cadastro/Signup.js"></script>
     </body>
