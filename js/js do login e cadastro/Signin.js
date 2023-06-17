@@ -28,8 +28,8 @@ function entrar(){
   
   listaUser = JSON.parse(localStorage.getItem('listaUser'))
   
-  listaUser?.forEach((item) => {
-    if(usuario.value == item.userCad && senha.value == item.senhaCad){
+listaEmail?.forEach((item) => {
+    if(email.value == item.emailCad && senha.value == item.senhaCad){
        
       userValid = {
          nome: item.nomeCad,
