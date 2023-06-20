@@ -204,6 +204,10 @@ nav{
     #conteudo h2{
         padding: 0;
     }
+    .fundo #conteudo img{
+        width: 100px;
+        height: 100px;
+    }
 }
 /* Configurando as imagens */
 .Logo img{
@@ -213,9 +217,9 @@ nav{
     position: relative;
     z-index: 10000;
 }
-#conteudo img{
-    width: 10px;
-    height: 10px;
+.fundo #conteudo img{
+    width: 1000px;
+    height: 1000px;
 }
 /* Configuração do Rodapé */
 #footer {
